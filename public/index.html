@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Personal Finance Manager</h1>
+    </header>
+    <main>
+        <section id="transaction-section">
+            <h2>Add Transaction</h2>
+            <form id="transaction-form">
+                <input type="number" id="income" placeholder="Income" required>
+                <input type="number" id="expense" placeholder="Expense" required>
+                <select id="category" required>
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="housing">Housing</option>
+                    <option value="transportation">Transportation</option>
+                    <option value="food">Food</option>
+                    <option value="others">Others</option>
+                </select>
+                <input type="text" id="description" placeholder="Description" required>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </section>
+        
+        <section id="overview-section">
+            <h2>Income & Expense Overview</h2>
+            <canvas id="incomeExpenseChart"></canvas>
+        </section>
+
+        <section id="report-section">
+            <h2>Financial Report</h2>
+            <button id="generate-report">Generate Report</button>
+            <div id="report-output"></div>
+        </section>
+
+        <section id="notifications-section">
+            <h2>Notifications</h2>
+            <div id="notifications"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
